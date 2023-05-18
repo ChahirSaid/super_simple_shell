@@ -2,7 +2,7 @@
 <hr>
 <p>The system call <code>execve</code> allows a process to execute another program (man 2 <code>execve</code>). Note that this system call does load the new program into the current process’ memory in place of the “previous” program: on success <code>execve</code> does not return to continue the rest of the “previous” program.</p>
 <p><b>Warning:</b> in this example, <code>execve</code> is used without the current environment (last argument), don’t forget to add it in your Shell!</p>
-<pre><code
+<pre><code>
 julien@ubuntu:~/c/shell$ cat exec.c
 #include &lt;stdio.h&gt;
 #include &lt;unistd.h&gt;
