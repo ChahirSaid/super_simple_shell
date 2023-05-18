@@ -7,11 +7,7 @@ julien@ubuntu:~/c/shell$ cat exec.c
 #include &lt;stdio.h&gt;
 #include &lt;unistd.h&gt;
 
-/**
- * main - execve example
- *
- * Return: Always 0.
- */
+
 int main(void)
 {
     char *argv[] = {"/bin/ls", "-l", "/usr/", NULL};
@@ -49,11 +45,6 @@ julien@ubuntu:~/c/shell$ cat fork.c
 #include &lt;stdio.h&gt;
 #include &lt;unistd.h&gt;
 
-/**
- * main - fork example
- *
- * Return: Always 0.
- */
 int main(void)
 {
     pid_t my_pid;
@@ -85,11 +76,6 @@ julien@ubuntu:~/c/shell$ cat fork.c
 #include &lt;stdio.h&gt;
 #include &lt;unistd.h&gt;
 
-/**
- * main - fork example
- *
- * Return: Always 0.
- */
 int main(void)
 {
     pid_t my_pid;
@@ -130,11 +116,6 @@ julien@ubuntu:~/c/shell$ cat wait.c
 #include &lt;sys/types.h&gt;
 #include <sys/wait.h>
 
-/**
- * main - fork & wait example
- *
- * Return: Always 0.
- */
 int main(void)
 {
     pid_t child_pid;
