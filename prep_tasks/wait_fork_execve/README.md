@@ -4,8 +4,8 @@
 <p><b>Warning:</b> in this example, <code>execve</code> is used without the current environment (last argument), don’t forget to add it in your Shell!</p>
 <pre><code
 julien@ubuntu:~/c/shell$ cat exec.c
-#include <stdio.h>
-#include <unistd.h>
+#include &lt;stdio.h&gt;
+#include &lt;unistd.h&gt;
 
 /**
  * main - execve example
@@ -46,8 +46,8 @@ julien@ubuntu:~/c/shell$ >
 <p>The system call <code>fork</code> (man 2 <code>fork</code>) creates a new child process, almost identical to the parent (the process that calls <code>fork</code>). Once <code>fork</code> successfully returns, two processes continue to run the same program, but with different stacks, datas and heaps.</p>
 <pre><code>
 julien@ubuntu:~/c/shell$ cat fork.c
-#include <stdio.h>
-#include <unistd.h>
+#include &lt;stdio.h&gt;
+#include &lt;unistd.h&gt;
 
 /**
  * main - fork example
@@ -82,8 +82,8 @@ My pid is 4820
 <p>Using the return value of <code>fork</code>, it is possible to know if the current process is the father or the child: <code>fork</code> will return 0 to the child, and the PID of the child to the father.
 <pre><code>
 julien@ubuntu:~/c/shell$ cat fork.c
-#include <stdio.h>
-#include <unistd.h>
+#include &lt;stdio.h&gt;
+#include &lt;unistd.h&gt;
 
 /**
  * main - fork example
@@ -125,9 +125,9 @@ julien@ubuntu:~/c/shell$ My pid is 4870
 <p>The <code>wait</code> system call (man 2<code> wait</code>) suspends execution of the calling process until one of its children terminates.</p>
 <pre><code>
 julien@ubuntu:~/c/shell$ cat wait.c
-#include <stdio.h>
-#include <unistd.h>
-#include <sys/types.h>
+#include &lt;stdio.h&gt;
+#include &lt;unistd.h&gt;
+#include &lt;sys/types.h&gt;
 #include <sys/wait.h>
 
 /**
