@@ -36,7 +36,7 @@ drwxr-xr-x   2 root root 12288 Dec  2 11:03 sbin
 drwxr-xr-x 295 root root 12288 Jul 27 08:58 share
 drwxr-xr-x   6 root root  4096 Dec  1 11:39 src
 julien@ubuntu:~/c/shell$ >
-</pre></code>
+</code></pre>
 <h1>Creating processes</h1>
 <hr>
 <p>The system call <code>fork</code> (man 2 <code>fork</code>) creates a new child process, almost identical to the parent (the process that calls <code>fork</code>). Once <code>fork</code> successfully returns, two processes continue to run the same program, but with different stacks, datas and heaps.</p>
@@ -68,7 +68,7 @@ After fork
 My pid is 4819
 julien@ubuntu:~/c/shell$ After fork
 My pid is 4820
-</pre></code>
+</code></pre>
 <i>Note: there is no typo in the above example</i>
 <p>Using the return value of <code>fork</code>, it is possible to know if the current process is the father or the child: <code>fork</code> will return 0 to the child, and the PID of the child to the father.
 <pre><code>
@@ -105,7 +105,7 @@ My pid is 4869
 (4869) 4870, I am your father
 julien@ubuntu:~/c/shell$ My pid is 4870
 (4870) Nooooooooo!
-</pre></code>
+</code></pre>
 <h1>Wait</h1>
 <hr>
 <p>The <code>wait</code> system call (man 2<code> wait</code>) suspends execution of the calling process until one of its children terminates.</p>
@@ -114,7 +114,7 @@ julien@ubuntu:~/c/shell$ cat wait.c
 #include &lt;stdio.h&gt;
 #include &lt;unistd.h&gt;
 #include &lt;sys/types.h&gt;
-#include <sys/wait.h>
+#include &lt;sys/wait.h&gt;
 
 int main(void)
 {
@@ -144,6 +144,6 @@ julien@ubuntu:~/c/shell$ ./wait
 Wait for me, wait for me
 Oh, it's all better now
 julien@ubuntu:~/c/shell$
-</pre> </code>
-<h1>Exercise: fork + wait + execve</h1>
+</code></pre>
+<h2>Exercise: fork + wait + execve</h2>
 <p>Write a program that executes the command <code>ls -l /tmp</code> in 5 different child processes. Each child should be created by the same process (the father). Wait for a child to exit before creating a new child.</p>
